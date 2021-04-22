@@ -174,7 +174,11 @@ class Airplane {
      }
 
      listSubjects(){
-      return `Loving ${this.favSubjects}`;
+      let sub = "Loving";
+      this.favSubjects.forEach(function(item){
+        sub += ` ${item}`;
+      });
+      return sub;
      }
      PRAssignment(subject){
        return `${this.name} has submitted a PR for ${subject}`;
